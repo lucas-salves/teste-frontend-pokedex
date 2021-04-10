@@ -1,6 +1,7 @@
 <template>
   <div id="app">
 
+<<<<<<< HEAD
     <pokemon v-for="pokemon in pokemonsList"
              :key="pokemon.id" 
              :pokemon-name="pokemon.name"
@@ -8,20 +9,31 @@
              :thumbImg="pokemon.sprites['front_default']" >
     </pokemon>
 
+=======
+    
+>>>>>>> dc62332... add: fetching the API data in App.vue component
   </div>
 </template>
 
 <script>
 
+<<<<<<< HEAD
 import Pokemon from './components/Pokemon'
+=======
+
+>>>>>>> dc62332... add: fetching the API data in App.vue component
 import PokemonApi from './services/pokemonsHttpMethods'
 import axios from 'axios'
 
 
 export default {
+<<<<<<< HEAD
   components: {
     Pokemon
   },
+=======
+
+>>>>>>> dc62332... add: fetching the API data in App.vue component
   data(){
     return {
       pokemonsList: [],
