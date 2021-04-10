@@ -1,6 +1,9 @@
 <template>
   <div class="search-bar-container">
-    
+    <form>
+      <input type="text">
+    </form>
+  </div>
 </template>
 
 <script>
