@@ -1,5 +1,6 @@
 <template>
   <div class="pokemon-item">
+<<<<<<< HEAD
       <div class="vertical-alignment">
           <div class="img-wrapper">
               
@@ -15,12 +16,19 @@
               </p>
           </div>
       </div>
+=======
+    
+>>>>>>> e5bc2a6... add: creation of the Pokemon.vue component, component which is responsible for displaying each pokemon
   </div>
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
     props: ['thumbImg', 'pokemonName', 'pokemonId']    
+=======
+  
+>>>>>>> e5bc2a6... add: creation of the Pokemon.vue component, component which is responsible for displaying each pokemon
 }
 </script>
 
