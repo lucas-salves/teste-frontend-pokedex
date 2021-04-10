@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    
+
     
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+
+
+import PokemonApi from './services/pokemonsHttpMethods'
+import axios from 'axios'
+
 
 export default {
-  name: 'App',
-  components: {
-    // HelloWorld
+
+  data(){
+    return {
+      pokemonsList: [],
+      pokemonsUrl: []
+      
+    }
+  },
+
+  mounted(){
+    PokemonApi.fetchPokemons().then(response => {      
+      this.pokemonsUrl = response.data.results.map( pokemon => pokemon.url)
+      this.pokemonsUrl.forEach((pokemonUrl) => {   
+        axios.get(pokemonUrl)
+        .then(
+          response => {
+            return this.pokemonsList.push(response.data)
+          }) ; 
+          
+      })
+      
+    })
+    //  console.log(this.pokemonsObjectList)
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
