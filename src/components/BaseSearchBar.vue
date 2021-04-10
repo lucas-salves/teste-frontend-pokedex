@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'searchbar'
+  name: 'basesearchbar'
 }
 </script>
 
