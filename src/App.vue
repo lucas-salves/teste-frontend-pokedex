@@ -1,6 +1,7 @@
 <template>
   <div id="app">
 
+
     <pokemon v-for="pokemon in pokemonsList"
              :key="pokemon.id" 
              :pokemon-name="pokemon.name"
@@ -8,20 +9,32 @@
              :thumbImg="pokemon.sprites['front_default']" >
     </pokemon>
 
+
+    
+
   </div>
 </template>
 
 <script>
 
+
+
+
+
+
+
 import Pokemon from './components/Pokemon'
+
 import PokemonApi from './services/pokemonsHttpMethods'
 import axios from 'axios'
 
 
 export default {
+
   components: {
     Pokemon
   },
+
   data(){
     return {
       pokemonsList: [],

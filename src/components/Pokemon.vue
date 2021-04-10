@@ -1,8 +1,12 @@
 <template>
   <div class="pokemon-item">
+
+
+      
+              
+
       <div class="vertical-alignment">
           <div class="img-wrapper">
-              
               <img :src="thumbImg" alt="" class="pokemon-thumb-img">
           </div>
 
@@ -15,12 +19,14 @@
               </p>
           </div>
       </div>
+
   </div>
 </template>
 
 <script>
 export default {
-    props: ['thumbImg', 'pokemonName', 'pokemonId']    
+
+    props: ['thumbImg', 'pokemonName', 'pokemonId']       
 }
 </script>
 
