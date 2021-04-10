@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <SearchBar></SearchBar>
+    <searchbar></searchbar>
     <pokemon v-for="pokemon in pokemonsList"
              :key="pokemon.id" 
              :pokemon-name="pokemon.name"
@@ -24,7 +24,7 @@
 
 
 import Pokemon from './components/Pokemon'
-import SearchBar from './components/SearchBar'
+import searchbar from './components/SearchBar'
 
 import PokemonApi from './services/pokemonsHttpMethods'
 import axios from 'axios'
@@ -33,7 +33,7 @@ import axios from 'axios'
 export default {
   components: {
     Pokemon,
-    SearchBar
+    searchbar
   },
 
   data(){
