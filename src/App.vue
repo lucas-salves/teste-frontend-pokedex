@@ -46,23 +46,13 @@ export default {
     basesearchbar
   },
   mounted(){
-    // PokemonApi.fetchPokemons().then(response => {      
-    //   this.pokemonsUrl = response.data.results.map( pokemon => pokemon.url)
-    //   this.pokemonsUrl.forEach((pokemonUrl) => {   
-    //     axios.get(pokemonUrl)
-    //     .then(
-    //       response => {
-    //         return this.pokemonsList.push(response.data)
-    //       }) ; 
-          
-    //   })
-      
-    // })
+    
     this.fetchPokemonsBy('url')
   },
   methods: {
     onSearchBarKeyup(value){
       this.searchBarMessage = value;
+      console.log('oi')
       let result;
       if(value == ''){
         // let uniquePokemonList = new Set(this.pokemonsList)
@@ -83,15 +73,7 @@ export default {
           
         }
       })
-
-       //  result = this.pokemonsList.filter( pokemon => pokemon.name == value)
-        // console.log(value)
         this.pokemonsList = result
-      // console.log(this.pokemonsList)
-      // this.pokemonsList.filter(function(el){
-      //   return el.name
-      // })
-      // return result
     },
     fetchPokemonsBy(filter){
       PokemonApi.fetchPokemons().then(response => {        

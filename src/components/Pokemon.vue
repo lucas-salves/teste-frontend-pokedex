@@ -25,7 +25,7 @@
 
 <script>
 export default {
-
+    name: 'pokemon',
     props: ['thumbImg', 'pokemonName', 'pokemonId']       
 }
 </script>
