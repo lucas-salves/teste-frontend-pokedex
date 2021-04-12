@@ -1,0 +1,75 @@
+@import './colors.scss';
+
+// App.vue component
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: sans-serif;
+    
+    background-color: $white-smoke;
+    
+}
+
+.pokemon-container {
+
+    display:flex;
+    flex-wrap: wrap;
+
+}
+
+
+// Pokemon.vue Component
+.pokemon-item {
+    
+    
+    min-width: 230px;
+    display:flex;
+    justify-content: center;
+    
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px $gray-dark;
+
+    background-color: $white;
+}
+
+.vertical-alignment{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    text-align: center;
+
+}
+
+.syde-by-syde-alignment{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+    padding: 7px;
+
+}
+
+// SearchBar.vue component
+
+.search-bar-container form input{
+    
+    height: 40px;
+    width: 98vw;
+
+    background-color: $white-smoke;
+    border: none;
+    border-bottom: 1px solid $gray-dark;
+    margin: 5px 10px;
+    
+
+}
