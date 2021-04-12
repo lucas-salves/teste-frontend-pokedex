@@ -19,7 +19,7 @@ body {
 
     display:flex;
     flex-wrap: wrap;
-    
+
 }
 
 
@@ -61,3 +61,15 @@ body {
 
 // SearchBar.vue component
 
+.search-bar-container form input{
+    
+    height: 40px;
+    width: 98vw;
+
+    background-color: $white-smoke;
+    border: none;
+    border-bottom: 1px solid $gray-dark;
+    margin: 5px 10px;
+    
+
+}
