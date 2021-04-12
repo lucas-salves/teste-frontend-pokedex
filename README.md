@@ -73,7 +73,7 @@ PHP, Wordpress, HTML5, Javascript, MySQL
 
 - [LinkedIn](https://www.linkedin.com/in/lucas-salves/)
 - Email: salves.lucas@outlook.com
--[Twitter](https://twitter.com/ERR_CPU_USAGE)
+- [Twitter](https://twitter.com/ERR_CPU_USAGE)
 
 
 
