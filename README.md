@@ -67,7 +67,7 @@ As seguintes tecnologias foram usadas na construção do projeto:
 ## Autor
 
 [Lucas Sousa Alves](https://github.com/lucas-salves) <br/>
-Apaixonado por tecnologia, formado em Análise e desenvolvimento de sistemas, cursando pós em Cybersecurity, quase 3 anos de experiência na área de TI atuando como analista de suporte. Estou em transição de carreira para área de desenvolvimento.
+Apaixonado por tecnologia, formado em Análise e desenvolvimento de sistemas pela Universidade Cruzeiro do Sul, cursando pós em Cybersecurity, quase 3 anos de experiência na área de TI atuando como analista de suporte. Estou em transição de carreira para área de desenvolvimento.
 Atualmente estou atuando como freelancer com a seguinte stack:
 PHP, Wordpress, HTML5, Javascript, MySQL
 
