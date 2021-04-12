@@ -1,5 +1,11 @@
 @import './colors.scss';
 
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: $white-smoke;
 }
@@ -8,6 +14,9 @@ body {
 .pokemon-item {
     
     width: 235px;
+    display:flex;
+    justify-content: center;
+    margin: 5px;
 
     background-color: $white;
 }
@@ -15,6 +24,7 @@ body {
 .vertical-alignment{
     display: flex;
     flex-direction: column;
+    
 }
 
 .syde-by-syde-alignment{
