@@ -4,17 +4,15 @@
 Esse projeto é um teste de front-end que exibe uma lista de Pokémons
 
 <!--ts-->
-   * [Sobre](#Project setup)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
-   * [Instalação](#instalacao)
-   * [Como usar](#como-usar)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-   * [Tests](#testes)
-   * [Tecnologias](#tecnologias)
+   * [Project Setup](#project-setup)
+   * [Status do Projeto](#tabela-de-conteudo)
+    * [Features](#instalacao)
+   * [Demonstraçao da aplicaçao](#como-usar)
+   * [Pre Requisitos](#pre-requisitos)
+   * [Tecnologias](#local-files)
+   * [Referências](#remote-files)
+   * [Autor](#multiple-files)
+   
 <!--te-->
 
 ## Project setup
@@ -68,14 +66,15 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## Autor
 
-<a href=“https://github.com/lucas-salves“>Lucas Sousa Alves</a>
+[Lucas Sousa Alves](https://github.com/lucas-salves) <br/>
 Apaixonado por tecnologia, formado em Análise e desenvolvimento de sistemas, cursando pós em Cybersecurity, quase 3 anos de experiência na área de TI atuando como analista de suporte. Estou em transição de carreira para área de desenvolvimento.
 Atualmente estou atuando como freelancer com a seguinte stack:
 PHP, Wordpress, HTML5, Javascript, MySQL
 
-<a href=“https://www.linkedin.com/in/lucas-salves/“>LinkedIn</a>
+- [LinkedIn](https://www.linkedin.com/in/lucas-salves/)
 - Email: salves.lucas@outlook.com
-<a href=“https://twitter.com/ERR_CPU_USAGE“>Twitter</a>
+-[Twitter](https://twitter.com/ERR_CPU_USAGE)
+
 
 
 
