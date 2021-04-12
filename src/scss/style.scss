@@ -18,14 +18,16 @@ body {
 .pokemon-container {
 
     display:flex;
-
+    flex-wrap: wrap;
+    
 }
 
 
 // Pokemon.vue Component
 .pokemon-item {
     
-    width: 235px;
+    
+    min-width: 230px;
     display:flex;
     justify-content: center;
     
@@ -56,3 +58,6 @@ body {
     padding: 7px;
 
 }
+
+// SearchBar.vue component
+
