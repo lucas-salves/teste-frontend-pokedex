@@ -60,7 +60,7 @@ export default {
     filteredPokemons(){
       
      
-       return this.pokemonsObjectList.filter(pokemon => pokemon.name.includes(this.search))
+       return this.pokemonsObjectList.filter(pokemon => pokemon.name.includes(this.search.toLowerCase()))
       
     }
     
