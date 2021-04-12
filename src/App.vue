@@ -4,13 +4,14 @@
     <basesearchbar
     v-on:searchTextFromSearchBar="onSearchBarKeyup"
     ></basesearchbar>
-    <pokemon v-for="pokemon in filteredPokemons"
-             :key="pokemon.id" 
-             :pokemon-name="pokemon.name"
-             :pokemonId="pokemon.id"
-             :thumbImg="pokemon.spriteUrl" >
-    </pokemon>
-
+    <div class="pokemon-container">
+      <pokemon v-for="pokemon in filteredPokemons"
+              :key="pokemon.id" 
+              :pokemon-name="pokemon.name"
+              :pokemonId="pokemon.id"
+              :thumbImg="pokemon.spriteUrl" >
+      </pokemon>
+    </div>
 
     
 
@@ -72,6 +73,6 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style src="./scss/style.scss" lang="scss" >
   
 </style>

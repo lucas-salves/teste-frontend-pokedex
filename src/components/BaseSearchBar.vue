@@ -1,7 +1,7 @@
 <template>
   <div class="search-bar-container">
     <form>
-      <input type="text" v-model="searchText" v-on:keyup="emitSearchText">
+      <input placeholder="Search" type="text" v-model="searchText" v-on:keyup="emitSearchText">
     </form>
   </div>
 </template>
