@@ -4,11 +4,11 @@
     <basesearchbar
     v-on:searchTextFromSearchBar="onSearchBarKeyup"
     ></basesearchbar>
-    <pokemon v-for="(pokemon, index) in pokemonsList"
-             :key="index" 
+    <pokemon v-for="pokemon in filteredPokemons"
+             :key="pokemon.id" 
              :pokemon-name="pokemon.name"
              :pokemonId="pokemon.id"
-             :thumbImg="pokemon.sprites['front_default']" >
+             :thumbImg="pokemon.spriteUrl" >
     </pokemon>
 
 
@@ -18,15 +18,9 @@
 </template>
 
 <script>
-
-
-
-
-
-
-
 import Pokemon from './components/Pokemon'
 import basesearchbar from './components/BaseSearchBar'
+import PokemonClass from './classes/Pokemon'
 
 import PokemonApi from './services/pokemonsHttpMethods'
 import axios from 'axios'
@@ -35,10 +29,11 @@ import axios from 'axios'
 export default {
   data(){
     return {
-      pokemonsList: [],
-      pokemonsUrl: [],
-      pokemonsFilter: [],
-      searchBarMessage: ''
+     
+      pokemonsList: new Array(),
+      pokemonsUrl:[],
+      pokemonsObjectList: new Array(),
+      search:''
     }
   },
   components: {
@@ -46,69 +41,37 @@ export default {
     basesearchbar
   },
   mounted(){
-    // PokemonApi.fetchPokemons().then(response => {      
-    //   this.pokemonsUrl = response.data.results.map( pokemon => pokemon.url)
-    //   this.pokemonsUrl.forEach((pokemonUrl) => {   
-    //     axios.get(pokemonUrl)
-    //     .then(
-    //       response => {
-    //         return this.pokemonsList.push(response.data)
-    //       }) ; 
+    PokemonApi.fetchPokemons().then((response) => {
+      this.pokemonsUrl = response.data.results.map(pokemon => pokemon.url)
+      this.pokemonsUrl.forEach((pokemon) => {
+        axios.get(pokemon).then((res) => {          
+          this.pokemonsObjectList.push( new PokemonClass(res.data.name, res.data.id,res.data.sprites['front_default'] ))
           
-    //   })
+        // console.log(this.pokemonsObjectList)
+        })
+        
+      })
+    })
+     
+  },
+  computed: {
+    
+    filteredPokemons(){
+      this.pokemonsObjectList.forEach((pokemon) => {
+        console.log(pokemon)
+      })
+     
+       return this.pokemonsObjectList.filter(pokemon => pokemon.name.includes(this.search))
       
-    // })
-    this.fetchPokemonsBy('url')
+    }
+    
   },
   methods: {
-    onSearchBarKeyup(value){
-      this.searchBarMessage = value;
-      let result;
-      if(value == ''){
-        // let uniquePokemonList = new Set(this.pokemonsList)
-       // let uniquePokemonList = new Set(this.pokemonsList)
-        result=''
-        console.log(this.pokemonsList)
-        this.fetchPokemonsBy('url')
-      }
-      
-      this.pokemonsList.forEach((pokemon) => {  
-          
-        if(pokemon.name.includes(value)){
-          
-           result = this.pokemonsList.filter( pokemon => pokemon.name.includes( value) )
-           
-        }else{
-          console.log('nenhum resultado encontrado')
-          
-        }
-      })
-
-       //  result = this.pokemonsList.filter( pokemon => pokemon.name == value)
-        // console.log(value)
-        this.pokemonsList = result
-      // console.log(this.pokemonsList)
-      // this.pokemonsList.filter(function(el){
-      //   return el.name
-      // })
-      // return result
-    },
-    fetchPokemonsBy(filter){
-      PokemonApi.fetchPokemons().then(response => {        
-          this.pokemonsFilter = response.data.results.map(pokemon => pokemon[filter])
-        this.pokemonsFilter.forEach((pokemon) => {
-          axios.get(pokemon).then(response => {
-                
-               this.pokemonsList.push(response.data)
-          })
-        })
-      })
-
+    onSearchBarKeyup(search){
+      this.search = search
     }
   }
-
- }
-
+}
 </script>
 
 <style lang="scss">
