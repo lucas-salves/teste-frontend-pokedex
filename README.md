@@ -5,13 +5,13 @@ Esse projeto é um teste de front-end que exibe uma lista de Pokémons
 
 <!--ts-->
    * [Project Setup](#project-setup)
-   * [Status do Projeto](#tabela-de-conteudo)
-    * [Features](#instalacao)
-   * [Demonstraçao da aplicaçao](#como-usar)
+   * [Status do Projeto](#Status-do-Projeto)
+    * [Features](#features)
+   * [Demonstraçao da aplicaçao](#Demonstraçao-da-aplicaçao)
    * [Pre Requisitos](#pre-requisitos)
-   * [Tecnologias](#local-files)
-   * [Referências](#remote-files)
-   * [Autor](#multiple-files)
+   * [Tecnologias](#tecnologias)
+   * [Referências](#referencias)
+   * [Autor](#autor)
    
 <!--te-->
 
