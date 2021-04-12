@@ -7,27 +7,46 @@
 }
 
 body {
+
+    font-family: sans-serif;
+    
     background-color: $white-smoke;
+    
 }
 
-// Pokemon Component
+// App.vue component
+
+// Pokemon.vue Component
 .pokemon-item {
     
     width: 235px;
     display:flex;
     justify-content: center;
-    margin: 5px;
+    
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px $gray-dark;
 
     background-color: $white;
 }
 
 .vertical-alignment{
+
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
+
+    text-align: center;
+
 }
 
 .syde-by-syde-alignment{
+
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+    padding: 7px;
+
 }
