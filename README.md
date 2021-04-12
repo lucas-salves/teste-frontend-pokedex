@@ -48,7 +48,7 @@ Antes de rodar o projeto, é preciso ter instalado em sua máquina algum gerenci
 
 ### 🛠 Tecnologias
 
-As seguintes ferramentas foram usadas na construção do projeto:
+As seguintes tecnologias foram usadas na construção do projeto:
 
 - [PokéApi](https://pokeapi.co/)
 - [Vue.js](https://vuejs.org/)
