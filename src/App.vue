@@ -58,7 +58,8 @@ export default {
   computed: {
     
     filteredPokemons(){
-       return this.pokemonsObjectList.filter(pokemon => pokemon.name.includes(this.search.toLowerCase())).slice().sort()
+       return this.pokemonsObjectList.filter(pokemon => pokemon.name.includes(this.search.toLowerCase())).slice().sort((a,b) => a.id - b.id)
+
     }
     
   },
