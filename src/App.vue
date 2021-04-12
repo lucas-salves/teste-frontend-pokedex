@@ -43,7 +43,7 @@ export default {
   },
   mounted(){
     PokemonApi.fetchPokemons().then((response) => {
-      this.pokemonsUrl = response.data.results.map(pokemon => pokemon.url)
+      this.pokemonsUrl = response.data.results.map(pokemon => pokemon.url)      
       this.pokemonsUrl.forEach((pokemon) => {
         axios.get(pokemon).then((res) => {          
           this.pokemonsObjectList.push( new PokemonClass(res.data.name, res.data.id,res.data.sprites['front_default'] ))
@@ -58,10 +58,7 @@ export default {
   computed: {
     
     filteredPokemons(){
-      
-     
-       return this.pokemonsObjectList.filter(pokemon => pokemon.name.includes(this.search.toLowerCase()))
-      
+       return this.pokemonsObjectList.filter(pokemon => pokemon.name.includes(this.search.toLowerCase())).slice().sort()
     }
     
   },
