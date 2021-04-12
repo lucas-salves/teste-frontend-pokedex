@@ -57,9 +57,7 @@ export default {
   computed: {
     
     filteredPokemons(){
-      this.pokemonsObjectList.forEach((pokemon) => {
-        console.log(pokemon)
-      })
+      
      
        return this.pokemonsObjectList.filter(pokemon => pokemon.name.includes(this.search))
       
@@ -74,6 +72,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" >
+  
 </style>
