@@ -4,3 +4,20 @@ body {
     background-color: $white-smoke;
 }
 
+// Pokemon Component
+.pokemon-item {
+    
+    width: 235px;
+
+    background-color: $white;
+}
+
+.vertical-alignment{
+    display: flex;
+    flex-direction: column;
+}
+
+.syde-by-syde-alignment{
+    display: flex;
+    flex-direction: row;
+}
