@@ -15,7 +15,7 @@
                   {{ pokemonName | capitalize}}
               </p>
               <p class="pokemon-id">
-                  {{ pokemonId }}
+                  {{ pokemonId  | preHashId}}
               </p>
           </div>
       </div>
@@ -32,6 +32,10 @@ export default {
             if(!value) return ''
             value = value.toString()
             return value.charAt(0).toUpperCase() + value.slice(1)
+        },
+        preHashId: function(value){
+            if(!value) return ''
+            return `#${value}`
         }
     }
 }
